@@ -5,7 +5,7 @@ class Article
 
   map_to_table :articles
 
-  has_many :comments, :key   => :article_id, 
+  has_many :comments, :key   => :article_id,
                       :class => "Comment"
 end
 
@@ -35,7 +35,7 @@ Comment.create(:body => "Angry comment!",      :article_id => article2.id)
 Comment.create(:body => "Frustrated comment!", :article_id => article2.id)
 Comment.create(:body => "Irritated comment!",  :article_id => article2.id)
 
-## Display all the articles and their comments 
+## Display all the articles and their comments
 
 Article.all.each do |article|
   puts %{
